@@ -1,0 +1,6 @@
+framework module IRTracker {
+  umbrella header "IRTracker.h"
+
+  export *
+  module * { export * }
+}
