@@ -11,7 +11,10 @@
 @implementation IRTrackManager
 
 - (void)trackEvent:(NSString *)event {
+    NSLog(@"%s, %d", __func__, __LINE__);
+    
     NSLog(@"you are tracking event: %@", event);
+    
 }
 
 @end
