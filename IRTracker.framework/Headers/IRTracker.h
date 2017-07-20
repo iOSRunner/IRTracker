@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+//1.0.2
 //1.0.1
 //! Project version number for DTTracker.
 FOUNDATION_EXPORT double DTTrackerVersionNumber;

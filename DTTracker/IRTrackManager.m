@@ -15,6 +15,8 @@
     
     NSLog(@"you are tracking event: %@", event);
     
+    NSLog(@"\r\nSuccess!");
+    
 }
 
 @end
