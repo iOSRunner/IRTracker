@@ -7,6 +7,7 @@
 //
 
 #import "IRTrackManager.h"
+#import <AFNetworking/AFNetworking.h>
 
 @implementation IRTrackManager
 
@@ -16,7 +17,7 @@
     NSLog(@"you are tracking event: %@", event);
     
     NSLog(@"\r\nSuccess!");
-    
+    AFHTTPClient * client = [[AFHTTPClient alloc] init];
 }
 
 @end
