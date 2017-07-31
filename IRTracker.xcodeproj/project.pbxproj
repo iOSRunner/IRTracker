@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		376B6F6E8872AE52485E4AA5 /* libPods-IRTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96465BE8E149682033DD9DCC /* libPods-IRTracker.a */; };
 		F70113B31F1F4A010077A178 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F70113AF1F1F4A010077A178 /* Info.plist */; };
 		F70113B41F1F4A010077A178 /* IRTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = F70113B01F1F4A010077A178 /* IRTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F70113B51F1F4A010077A178 /* IRTrackManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F70113B11F1F4A010077A178 /* IRTrackManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5EC1C9F0EC2177615154895C /* Pods-IRTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRTracker/Pods-IRTracker.release.xcconfig"; sourceTree = "<group>"; };
+		96465BE8E149682033DD9DCC /* libPods-IRTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IRTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A0188A826743547B91CD8A /* Pods-IRTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRTracker/Pods-IRTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		F70113AF1F1F4A010077A178 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F70113B01F1F4A010077A178 /* IRTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRTracker.h; sourceTree = "<group>"; };
 		F70113B11F1F4A010077A178 /* IRTrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRTrackManager.h; sourceTree = "<group>"; };
@@ -40,12 +44,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				376B6F6E8872AE52485E4AA5 /* libPods-IRTracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78828246298FF1EA417829D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7A0188A826743547B91CD8A /* Pods-IRTracker.debug.xcconfig */,
+				5EC1C9F0EC2177615154895C /* Pods-IRTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AD90FE38414D5788DF3A8BAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96465BE8E149682033DD9DCC /* libPods-IRTracker.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F70113AE1F1F4A010077A178 /* DTTracker */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +84,8 @@
 			children = (
 				F70113AE1F1F4A010077A178 /* DTTracker */,
 				F7C4FD171ECC748900C3EBCC /* Products */,
+				78828246298FF1EA417829D3 /* Pods */,
+				AD90FE38414D5788DF3A8BAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,10 +116,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7C4FD1E1ECC748900C3EBCC /* Build configuration list for PBXNativeTarget "IRTracker" */;
 			buildPhases = (
+				23197D72ABA617260E767E19 /* [CP] Check Pods Manifest.lock */,
 				F7C4FD111ECC748900C3EBCC /* Sources */,
 				F7C4FD121ECC748900C3EBCC /* Frameworks */,
 				F7C4FD131ECC748900C3EBCC /* Headers */,
 				F7C4FD141ECC748900C3EBCC /* Resources */,
+				75D48DEEAB37710FC395198C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,6 +183,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		23197D72ABA617260E767E19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		75D48DEEAB37710FC395198C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IRTracker/Pods-IRTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F747C2B71ECC78350091B946 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,6 +356,7 @@
 		};
 		F7C4FD1F1ECC748900C3EBCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7A0188A826743547B91CD8A /* Pods-IRTracker.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					"$(ARCHS_STANDARD)",
@@ -320,10 +377,14 @@
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = "-fembed-bitcode";
+				OTHER_CFLAGS = (
+					"-fembed-bitcode",
+					"$(inherited)",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
+					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cainiao.test20161124.DTTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -333,6 +394,7 @@
 		};
 		F7C4FD201ECC748900C3EBCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EC1C9F0EC2177615154895C /* Pods-IRTracker.release.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					"$(ARCHS_STANDARD)",
@@ -352,10 +414,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = staticlib;
-				OTHER_CFLAGS = "-fembed-bitcode";
+				OTHER_CFLAGS = (
+					"-fembed-bitcode",
+					"$(inherited)",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
+					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cainiao.test20161124.DTTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
