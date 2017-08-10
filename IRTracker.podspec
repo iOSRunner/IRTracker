@@ -1,9 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = "IRTracker"
-  s.version          = "1.0.2"
+  s.version          = "1.0.3"
   s.summary          = "An user tracker used on iOS."
   s.description      = <<-DESC
                        It is an user tracker used on iOS, which implement by Objective-C.
+                       1.0.3 is source output.
                        DESC
   s.homepage         = "https://github.com/iOSRunner/IRTracker"
   # s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
@@ -17,13 +18,13 @@ Pod::Spec.new do |s|
   # s.osx.deployment_target = '10.7'
   s.requires_arc = true
 
-  #s.source_files = 'WZMarqueeView/*'
+  s.source_files = 'DTTracker/*'
   # s.resources = 'Assets'
 
   # s.ios.exclude_files = 'Classes/osx'
   # s.osx.exclude_files = 'Classes/ios'
   # s.public_header_files = 'Classes/**/*.h'
-  s.vendored_frameworks = 'IRTracker.framework'
+  #s.vendored_frameworks = 'IRTracker.framework'
   s.frameworks = 'Foundation'
 
 end
