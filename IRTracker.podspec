@@ -26,5 +26,6 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Classes/**/*.h'
   #s.vendored_frameworks = 'IRTracker.framework'
   s.frameworks = 'Foundation'
+  s.dependency 'AFNetworking'
 
 end
