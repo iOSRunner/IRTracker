@@ -7,6 +7,6 @@ ali_source 'alibaba-specs-mirror'
 
 target "IRTracker" do
     
-    pod 'AFNetworking'
+    #pod 'AFNetworking'
     
 end

@@ -7,7 +7,6 @@
 //
 
 #import "IRTrackManager.h"
-//#import <AFNetworking/AFNetworking.h>
 
 @implementation IRTrackManager
 
