@@ -15,7 +15,7 @@
     
     NSLog(@"you are tracking event: %@", event);
     
-    NSLog(@"\r\nSuccess!");
+    NSLog(@"\r\n1.0.5 Success!");
 //    AFHTTPClient * client = [[AFHTTPClient alloc] init];
 }
 
